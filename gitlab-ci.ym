@@ -1,0 +1,16 @@
+stages:
+  - build
+  - test
+
+build_job:
+  stage: build
+  image: python:3.10
+  script:
+    - python --version
+    - python -m compileall task_manager.py
+
+test_job:
+  stage: test
+  image: python:3.10
+  script:
+    - echo "Для этого варианта тестов пока не подготовлено."
